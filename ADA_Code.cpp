@@ -1,11 +1,11 @@
-#include<iostream>   /////////////////////////////////////////
-#include<iomanip>    /////////////////////////////////////////
-#include<fstream>    /////////////////////////////////////////
-#include<conio.h>    //////////////////Header/////////////////
-#include<string.h>   //////////////////Files//////////////////
-#include<stdio.h>    /////////////////////////////////////////
-#include <cstdlib>   /////////////////////////////////////////
-#include <windows.h> /////////////////////////////////////////
+#include<iostream>   
+#include<iomanip>    
+#include<fstream>    
+#include<conio.h>    
+#include<string.h>   
+#include<stdio.h>    
+#include <cstdlib>   
+#include <windows.h> 
 using namespace std;
 void gotoxy(short , short );
 void display(); //display function
@@ -49,13 +49,13 @@ void mbyauthor();    //modify by author
 
 struct book       
 {
-	int bookid;                ///////////////////////////
-	char bookname[100];         ///////////////////////////
-	char authorname[50];       ///////////////////////////
-	char bookcategory[100];     ///Members of structure///
-	char bookpubcom[20];       ///////////////////////////
-	char bookpubmonth[20];     ///////////////////////////
-	int bookpubyear;           ///////////////////////////
+	int bookid;                
+	char bookname[100];         
+	char authorname[50];       
+	char bookcategory[100];     
+	char bookpubcom[20];       
+	char bookpubmonth[20];     
+	int bookpubyear;          
 };
 
     book books[1000];          
@@ -127,15 +127,11 @@ int main()
 		 	default:
 			puts("\n\n \t\tSelect only from the given menu.....\n \t\tpress enter to to go to main menu......");
 			getch();
-       } //end switch
-     }//end while
+       } 
+     }
 
 	getch();
- }//end main
-
-//////////////////////////////////////
-///////////////////Display///////////////
-/////////////////////////////////////
+ }
 
 void display(void)
 	{
@@ -154,10 +150,6 @@ void display(void)
 
 	}
 
-
-//////////////////////////////////////
-///////////////////Add///////////////
-/////////////////////////////////////
 void add(void)
 	{
 		char ch;char id1[6],year[4];
@@ -168,8 +160,6 @@ void add(void)
 			cout<< "In ADD function\n";
 			cout<<"Enter Book Name: ";
 			gets(books[n].bookname);
-			//cin.getline(emp[n].name,40);
-			//cin.ignore(40,'\n');
 			cout<<"Enter Book ID: ";
 			gets(id1);
 			books[n].bookid=atoi(id1);
@@ -192,7 +182,6 @@ void add(void)
 		while(ch!='n'&& ch!='N');
 	}
 
-//////////Search////////////////////
 void search(void)
 	{
 		system("cls");
@@ -249,8 +238,6 @@ void search(void)
        }
 	}
 
-///////Search by name///////
-
 void sbyname(void)
 	{
 		char name[60];
@@ -280,8 +267,6 @@ void sbyname(void)
 		getch();
 	}
 
-///////Search by author///////
-
 void sbyauthor(void)
 	{
 		char author[60];
@@ -310,8 +295,6 @@ void sbyauthor(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Search by id///////
 
 void sbyid(void)
 	{
@@ -343,8 +326,6 @@ void sbyid(void)
 		getch();
 	}
 
-///////Search by category///////
-
 void sbycategory(void)
 	{
 		char category[60];
@@ -374,8 +355,6 @@ void sbycategory(void)
 		getch();
 	}
 
-///////Search by Publication Company///////
-
 void sbypubcom(void)
 	{
 		char company[60];
@@ -404,8 +383,6 @@ void sbypubcom(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Search by Publication Year///////
 
 void sbypubyear(void)
 	{
@@ -437,8 +414,6 @@ void sbypubyear(void)
 		getch();
 	}
 
-//////////sort///////////////////////
-
 void sort(void)
 {
 	system("cls");
@@ -458,13 +433,8 @@ void sort(void)
 
           <<setw( 32 ) << "Enter Option      [ ]" << endl << endl;
 			gotoxy(30,8);
-		//	cin>>ch1;
-
-
-
-
+	
 	   switch(getche())
-	  //switch(ch1)
        {
          case 'a':
 		 case 'A':sortas();break;
@@ -479,8 +449,6 @@ void sort(void)
 		getch();
        }
 }
-
-///////Sort in Ascending Order///////
 
 void sortas(void)
 {
@@ -509,13 +477,8 @@ void sortas(void)
 
 		  <<setw( 32 ) << "Enter Option      [ ]" << endl << endl;
 			gotoxy(30,16);
-		//	cin>>ch1;
-
-
-
-
+	
 	   switch(getche())
-	  //switch(ch1)
        {
          case 'n':
 		 case 'N':sortasname();break;
@@ -542,8 +505,6 @@ void sortas(void)
 		getch();
        }
 }
-
-///////Sort in Desending Order///////
 
 void sortds(void)
 {
@@ -572,13 +533,8 @@ void sortds(void)
 
 		  <<setw( 32 ) << "Enter Option      [ ]" << endl << endl;
 			gotoxy(30,16);
-		//	cin>>ch1;
-
-
-
-
+	
 	   switch(getche())
-	  //switch(ch1)
        {
          case 'n':
 		 case 'N':sortdsname();break;
@@ -606,8 +562,6 @@ void sortds(void)
        }
 }
 
-///////Sort in Ascending order by id///////
-
 void sortasid(void)
 	{
 		int i,j;
@@ -629,8 +583,6 @@ void sortasid(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by id///////
 
 void sortdsid(void)
 	{
@@ -654,8 +606,6 @@ void sortdsid(void)
 		display();
 	}
 
-///////Sort in Ascending order by year///////
-
 void sortaspubyear(void)
 	{
 		int i,j;
@@ -677,8 +627,6 @@ void sortaspubyear(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by year///////
 
 void sortdspubyear(void)
 	{
@@ -702,8 +650,6 @@ void sortdspubyear(void)
 		display();
 	}
 
-///////Sort in Ascending order by name///////
-
 void sortasname(void)
 	{
 		int i,j;
@@ -725,8 +671,6 @@ void sortasname(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by name///////
 
 void sortdsname(void)
 	{
@@ -750,8 +694,6 @@ void sortdsname(void)
 		display();
 	}
 
-///////Sort in Ascending order by author///////
-
 void sortasauthor(void)
 	{
 		int i,j;
@@ -773,8 +715,6 @@ void sortasauthor(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by author///////
 
 void sortdsauthor(void)
 	{
@@ -798,8 +738,6 @@ void sortdsauthor(void)
 		display();
 	}
 
-///////Sort in Ascending order by category///////
-
 void sortascategory(void)
 	{
 		int i,j;
@@ -821,8 +759,6 @@ void sortascategory(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by category///////
 
 void sortdscategory(void)
 	{
@@ -846,8 +782,6 @@ void sortdscategory(void)
 		display();
 	}
 
-///////Sort in Ascending order by company///////
-
 void sortaspubcom(void)
 	{
 		int i,j;
@@ -869,8 +803,6 @@ void sortaspubcom(void)
 		}
 		display();
 	}
-
-///////Sort in Descending order by company///////
 
 void sortdspubcom(void)
 	{
@@ -894,7 +826,6 @@ void sortdspubcom(void)
 		display();
 	}
 
-////////////Delete//////////////////////
 void del(void)
 	{
 		system("cls");
@@ -922,13 +853,8 @@ void del(void)
 
 		  <<setw( 32 ) << "Enter Option      [ ]" << endl << endl;
 			gotoxy(30,16);
-		//	cin>>ch1;
-
-
-
-
+	
 	   switch(getche())
-	  //switch(ch1)
        {
          case 'n':
 		 case 'N':dbyname();break;
@@ -955,8 +881,6 @@ void del(void)
 		getch();
        }
 	}
-
-///////Delete by name///////
 
 void dbyname(void)
 	{
@@ -986,8 +910,6 @@ void dbyname(void)
 		getch();
 	}
 
-///////Delete by author///////
-
 void dbyauthor(void)
 	{
 		char author[60];
@@ -1015,8 +937,6 @@ void dbyauthor(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Delete by id///////
 
 void dbyid(void)
 	{
@@ -1047,8 +967,6 @@ void dbyid(void)
 		getch();
 	}
 
-///////Delete by category///////
-
 void dbycategory(void)
 	{
 		char category[60];
@@ -1076,8 +994,6 @@ void dbycategory(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Delete by company///////
 
 void dbypubcom(void)
 	{
@@ -1107,8 +1023,6 @@ void dbypubcom(void)
 		getch();
 	}
 
-///////Delete by year///////
-
 void dbypubyear(void)
 	{
 		char year[4];
@@ -1137,7 +1051,7 @@ void dbypubyear(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-///////////Modify//////////////////////
+
 void modify(void)
 	{
 		system("cls");
@@ -1165,13 +1079,8 @@ void modify(void)
 
 		  <<setw( 32 ) << "Enter Option      [ ]" << endl << endl;
 			gotoxy(30,16);
-		//	cin>>ch1;
-
-
-
-
+	
 	   switch(getche())
-	  //switch(ch1)
        {
          case 'n':
 		 case 'N':mbyname();break;
@@ -1199,8 +1108,6 @@ void modify(void)
        }
 	}
 
-///////Modify by name///////
-
 void mbyname(void)
 	{
 		char name[60];
@@ -1227,8 +1134,6 @@ void mbyname(void)
 				cout<< "In Modify function\n";
 				cout<<"Enter new Book Name: ";
 				gets(books[loc].bookname);
-				//cin.getline(emp[n].name,40);
-				//cin.ignore(40,'\n');
 				cout<<"MODIFIED!"<<endl;
 		}
 		if(found == 0)
@@ -1237,8 +1142,6 @@ void mbyname(void)
 		getch();
 		}
 	}
-
-///////Modify by author///////
 
 void mbyauthor(void)
 	{
@@ -1274,8 +1177,6 @@ void mbyauthor(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Modify by id///////
 
 void mbyid(void)
 	{
@@ -1315,8 +1216,6 @@ void mbyid(void)
 		getch();
 	}
 
-///////Modify by category///////
-
 void mbycategory(void)
 	{
 		char category[60];
@@ -1352,8 +1251,6 @@ void mbycategory(void)
 		getch();
 	}
 
-///////Modify by company///////
-
 void mbypubcom(void)
 	{
 		char company[60];
@@ -1388,8 +1285,6 @@ void mbypubcom(void)
 		cout<<"Press enter to goto main manu.....";
 		getch();
 	}
-
-///////Modify by year///////
 
 void mbypubyear(void)
 	{
@@ -1428,11 +1323,8 @@ void mbypubyear(void)
 		getch();
 	}
 
-////////////////////////////////////////
-/////////////////gotoxy //////////////////////////
 void gotoxy(short x, short y)
 {
 COORD pos = {x, y};
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
-//////////////////////////////////////////
